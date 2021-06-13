@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+    <appender name="Console_Appender" class="org.apache.log4j.ConsoleAppender">
+        <param name="Target" value="System.out"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p %-80C Line:%L - %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="File_Appender" class="org.apache.log4j.FileAppender">
+        <param name="File"   value="logFile.log" />
+        <param name="Append" value="false" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p %-80C Line:%L - %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="MailAppender" class="org.apache.log4j.net.SMTPAppender">
+        <param name="BufferSize" value="512" />
+        <param name="SMTPProtocol" value="smtps" />
+        <param name="SMTPHost" value="smtp.gmail.com" />
+        <param name="SMTPPort" value="465" />
+        <param name="SMTPUsername" value="mgladch@gmail.com" />
+        <param name="SMTPPassword" value="qjvzkdamohlcpmxi" />
+        <param name="From" value="mgladch@gmail.com" />
+        <param name="To" value="mgladch@gmail.com" />
+        <param name="Subject" value="Fatal Error log" />
+
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p %-80C Line:%L - %m%n" />
+        </layout>
+
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="LevelMin" value="fatal" />
+        </filter>
+
+    </appender>
+
+
+    <root>
+        <priority value ="debug" />
+        <!--<appender-ref ref="Console_Appender" />-->
+        <appender-ref ref="File_Appender" />
+        <appender-ref ref="MailAppender"/>
+    </root>
+
+</log4j:configuration>

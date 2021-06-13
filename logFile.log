@@ -1,0 +1,8 @@
+2019-12-20 21:32:16.290 INFO  commandPattern.commands.createCommands.AddCargoPlain                             Line:23 - AddCargoPlain command
+2019-12-20 21:32:16.293 DEBUG commandPattern.commands.createCommands.AddCargoPlain                             Line:24 - Parameters: 10 10 10 10
+2019-12-20 21:32:16.333 INFO  commandPattern.commands.createCommands.AddPassangerPlain                         Line:24 - AddPassangerPlain command
+2019-12-20 21:32:16.334 DEBUG commandPattern.commands.createCommands.AddPassangerPlain                         Line:25 - Parameters: 10 10 10 10
+2019-12-20 21:32:16.360 INFO  commandPattern.commands.calculation.CalculationCapacity                          Line:18 - CalculationCapacity command
+2019-12-20 21:32:16.364 INFO  commandPattern.commands.calculation.CalculationSeats                             Line:18 - CalculationSeats command
+2019-12-20 21:32:16.376 INFO  commandPattern.commands.createCommands.DeleteAirplane                            Line:19 - DeleteAirplane command
+2019-12-20 21:32:16.377 DEBUG commandPattern.commands.createCommands.DeleteAirplane                            Line:20 - Parameters: 4
